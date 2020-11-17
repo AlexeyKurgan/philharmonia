@@ -1,0 +1,8 @@
+@mixin block-padding($pl, $pr) {
+  padding-left: $pl;
+  padding-right: $pr;
+}
+
+@mixin font-family($font) {
+  font-family: $font;
+}

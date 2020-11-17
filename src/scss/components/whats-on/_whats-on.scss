@@ -1,0 +1,11 @@
+.whats-on {
+  @include block-padding(60px, 60px);
+
+  &__title {
+    @include font-family($helvetica-bold);
+    padding-left: 81px;
+    line-height: 80px;
+    letter-spacing: 3px;
+    font-size: 56px;
+  }
+}

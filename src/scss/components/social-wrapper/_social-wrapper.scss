@@ -1,0 +1,48 @@
+.social-wrapper {
+  @include block-padding(60px, 60px);
+  padding-top: 62px;
+  padding-bottom: 148px;
+
+  &__list {
+    justify-content: center;
+    margin-top: 0px;
+  }
+
+  &__item {
+    margin: 0;
+    margin-right: 14px;
+    margin-left: 14px;
+    font-size: 42px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &:last-child {
+      margin-right: 0;
+      &:hover {
+        transition: all ease-in 0.4s;
+        background-color: $color1;
+      }
+    }
+
+    a {
+      width: 70px;
+      height: 70px;
+    }
+  }
+
+  .youtube-svg {
+    width: 62px;
+    height: 62px;
+  }
+  .instagram-svg {
+    width: 42px;
+    height: 42px;
+
+    &__circle {
+      &_black {
+        fill: $color3;
+      }
+    }
+  }
+}

@@ -1,0 +1,29 @@
+/*----- libs in project -----*/
+@import "libs/bootstrap-reboot";
+@import "libs/fonts";
+/*-----/ libs in project /-----*/
+
+/*----- base styles in project -----*/
+@import "base/mixin";
+@import "base/variables";
+@import "base/base-style";
+/*-----/ base styles in project /-----*/
+
+/*----- components styles in project -----*/
+@import "components/header/header";
+@import "components/social/social";
+@import "components/slider/slider";
+@import "components/whats-on/whats-on";
+@import "components/with-us/with-us";
+@import "components/our-latest/our-latest";
+@import "components/shop-and-support/shop-and-support";
+@import "components/subscribe/subscribe";
+@import "components/our-instagram/our-instagram";
+@import "components/social-wrapper/social-wrapper";
+@import "components/footer/footer";
+/*----- components styles in project -----*/
+
+/*----- small components styles in project -----*/
+@import "components/content-btn/content-btn";
+@import "components/events/events";
+/*----- small components styles in project -----*/

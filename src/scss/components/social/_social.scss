@@ -1,0 +1,93 @@
+.social {
+  display: flex;
+  justify-content: flex-end;
+  list-style: none;
+  margin: 0;
+  margin-top: 35px;
+  margin-right: 2px;
+  padding: 0;
+
+  &__item {
+    border-radius: 50%;
+    background-color: #c2c3c5;
+    margin-left: 10px;
+    transition: all ease-in 0.4s;
+
+    &:hover {
+      transition: all ease-in 0.4s;
+      background-color: $color1;
+      &:last-child {
+        background-color: transparent;
+      }
+    }
+
+    a {
+      display: flex;
+      width: 27px;
+      height: 27px;
+      text-decoration: none;
+      justify-content: center;
+      align-items: center;
+      color: $color4;
+    }
+
+    &_search {
+      font-size: 26px;
+      border-radius: none;
+      background-color: transparent;
+      a {
+        transition: all ease-in 0.4s;
+        &:hover {
+          transition: all ease-in 0.4s;
+          color: $color1;
+        }
+        color: $color3;
+      }
+    }
+  }
+
+  .instagram-svg {
+    display: flex;
+    margin-left: 1px;
+    &__path1,
+    &__path2,
+    &__path8,
+    &__circle {
+      fill: $color4;
+    }
+
+    &__path3,
+    &__path4,
+    &__path5,
+    &__path6,
+    &__path7,
+    &__path9,
+    &__path10,
+    &__path11,
+    &__path12,
+    &__path13,
+    &__path14,
+    &__path15,
+    &__path16 {
+      fill: $color3;
+    }
+  }
+
+  .youtube-svg {
+    display: flex;
+    width: 25px;
+    height: 25px;
+
+    &__top-text {
+      fill: $color4;
+    }
+
+    &__middle-text {
+      fill: $color4;
+      stroke: $color3;
+    }
+    &__bottom-text {
+      fill: $color3;
+    }
+  }
+}

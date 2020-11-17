@@ -1,0 +1,54 @@
+.subscribe {
+  text-align: center;
+  @include font-family($helvetica-bold);
+
+  &__title {
+    padding-left: 68px;
+    line-height: 80px;
+    letter-spacing: 1px;
+    padding-top: 207px;
+    padding-bottom: 36px;
+    font-size: 60px;
+  }
+
+  input {
+    width: 200px;
+    min-height: 52px;
+    margin-left: 57px;
+    margin-right: 10px;
+    padding: 0 10px;
+    @include font-family($helvetica-bold);
+    color: $color3;
+    font-size: 25px;
+    text-transform: uppercase;
+    text-align: center;
+    border: 2px solid $color3;
+    border-bottom: 1px solid $color3;
+    background-color: transparent;
+    transition: all ease-out 0.4s;
+
+    &:hover {
+      transition: all ease-out 0.4s;
+      border: 2px solid $color1;
+      border-bottom: 1px solid $color1;
+    }
+
+    &::placeholder {
+      color: $color3;
+    }
+
+    &:last-child {
+      cursor: pointer;
+      color: $color1;
+      width: 180px;
+      margin-left: 0;
+      margin-right: 0;
+      padding: 0;
+
+      &:hover {
+        background-color: $color1;
+        color: $color4;
+      }
+    }
+  }
+}

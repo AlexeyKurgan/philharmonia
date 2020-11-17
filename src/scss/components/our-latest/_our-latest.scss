@@ -1,0 +1,54 @@
+.our-latest {
+  margin: 0;
+  padding: 0;
+  @include block-padding(60px, 60px);
+
+  &__title {
+    @include font-family($helvetica-bold);
+    padding-left: 77px;
+    margin: 0;
+    line-height: 39px;
+    word-spacing: 6px;
+    letter-spacing: -1px;
+    font-size: 63px;
+  }
+  &__video {
+    position: relative;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 852px;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+  }
+
+  &__link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: $color4;
+    background-color: $color1;
+    transition: all ease-in 0.4s;
+    border: 3px solid transparent;
+    border-radius: 50%;
+
+    img {
+      width: 80px;
+      transform: rotate(90deg);
+    }
+    &:hover {
+      transition: all ease-in 0.4s;
+      border: 3px solid $color4;
+    }
+  }
+}

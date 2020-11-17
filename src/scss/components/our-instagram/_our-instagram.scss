@@ -1,0 +1,31 @@
+.our-instagram {
+  @include block-padding(60px, 60px);
+  @include font-family($helvetica-bold);
+
+  &__title {
+    font-size: 60px;
+    text-align: center;
+    letter-spacing: 1px;
+    padding-left: 37px;
+    padding-top: 69px;
+    padding-bottom: 37px;
+  }
+
+  &__list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    align-items: flex-end;
+  }
+
+  &__item {
+    width: 324px;
+    height: 324px;
+
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+}

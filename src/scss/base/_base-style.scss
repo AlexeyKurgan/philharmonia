@@ -1,0 +1,25 @@
+html {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+body {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+  @include font-family($helvetica-regular);
+}
+
+.title {
+  text-transform: uppercase;
+  font-size: 40px;
+  color: $color1;
+  padding-top: 113px;
+  padding-bottom: 53px;
+}
+
+.container {
+  width: 1792px;
+  margin: 0 auto;
+}

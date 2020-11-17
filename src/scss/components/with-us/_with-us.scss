@@ -1,0 +1,13 @@
+.with-us {
+  @include block-padding(60px, 60px);
+
+  &__title {
+    @include font-family($helvetica-bold);
+    padding-left: 80px;
+    line-height: 0;
+    font-size: 59px;
+    margin: 0;
+    letter-spacing: 2px;
+    padding-bottom: 99px;
+  }
+}

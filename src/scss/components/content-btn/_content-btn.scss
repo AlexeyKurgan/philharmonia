@@ -1,0 +1,21 @@
+.content-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+  border: 1px solid transparent;
+  max-width: 227px;
+  padding: 0;
+  text-transform: uppercase;
+  transition: all ease-in-out 0.4s;
+
+  a {
+    line-height: 30px;
+    font-weight: 600;
+    font-size: 30px;
+    width: 100%;
+    padding: 12px 26px 8px 26px;
+    text-decoration: none;
+    color: $color4;
+  }
+}

@@ -34,6 +34,11 @@
   .youtube-svg {
     width: 62px;
     height: 62px;
+
+    &__middle-text{
+      fill: $color4 !important;
+      stroke: $color4;
+    }
   }
   .instagram-svg {
     width: 42px;

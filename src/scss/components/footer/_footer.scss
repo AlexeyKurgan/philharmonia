@@ -50,13 +50,12 @@
   }
 
   //info section
-
   .info {
-    border: 1px solid red;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    margin-bottom: 131px;
 
     &__wrapper-arrow {
       width: 64px;
@@ -133,5 +132,105 @@
         letter-spacing: 1px;
       }
     }
+
+    &__social{
+      margin-top: 57px;
+      font-size: 21px;
+      
+      &-item{
+        width: 36px;
+        height: 36px;
+        &:hover{
+          background-color:$color4;
+        }
+
+        &:last-child{
+          background-color:transparent;
+        }
+
+        a{
+          color:$color2 !important;
+          &:hover{
+            color:$color2 !important;
+          }
+        }
+
+        &:last-child a {
+          font-size: 37px;
+          color:$color3 !important;
+
+          &:hover{
+            
+            color:$color4 !important;
+          }
+        }
+
+        &_search{
+          color:$color4 !important;
+        } 
+
+      }
+      &-link{
+        width: 100%;
+        height: 100%;
+
+        .instagram-svg{
+          width: 19px;
+          height: 19px;
+          
+          &__path2,
+          &__path8,
+          &__path1{
+            fill: $color2 ;
+          }
+
+          &__circle{
+            fill:$color2;
+            &_black{
+              fill:$color3;
+            }
+          }
+        }
+
+      .youtube-svg{
+        width: 32px;
+        height: 33px;
+
+        &__top-text,
+        &__middle-text{
+          fill:$color2;
+        }
+        
+      }
+        &:hover{
+          color:$color4 !important;
+        }
+      }
+    }
+  }
+
+  .authors{
+    @include font-family($helvetica-regular);
+    font-size: 24px;
+    text-transform: capitalize;
+
+    &__inner{
+      display: flex;
+      justify-content: center;
+      align-items:center;
+      flex-direction: column;
+    }
+
+    p{
+      letter-spacing: 1px;
+      
+      span{
+        @include font-family($helvetica-bold);
+        text-transform: uppercase;
+        
+      }
+    }
+    
+   
   }
 }

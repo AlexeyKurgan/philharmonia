@@ -1,12 +1,24 @@
 .header {
+  width: 100%;
   @include block-padding(60px, 60px);
-
+  // topline section
   &__topline {
+    width: 100%;
+    min-height: 239px;
     display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
   }
 
+  // burger menu
+  &__burger-menu {
+    display: none;
+  }
+
+  // logo
   &__logo {
-    min-width: 300px;
+    flex-grow: 1;
+    max-width: 300px;
     text-transform: lowercase;
 
     &-top {
@@ -27,19 +39,22 @@
       }
 
       &-right {
-        position: absolute;
-        right: 67px;
-        bottom: 4px;
         letter-spacing: 1px;
         font-weight: 600;
         text-transform: uppercase;
         font-size: 15px;
         line-height: 15px;
+        display: flex;
+        justify-content: flex-end;
+        margin-top: -32px;
       }
     }
   }
 
+  // season
   .season {
+    // border: 1px solid red;
+    max-width: 675px;
     display: flex;
     @include font-family($helvetica-bold);
     text-transform: uppercase;
@@ -74,7 +89,6 @@
 
       &-title {
         font-size: 140px;
-        padding-left: 42px;
         letter-spacing: -2px;
       }
       &-text {
@@ -84,15 +98,17 @@
     }
   }
 
+  // celebrating
   &__celebrating {
-    min-width: 350px;
+    width: 26%;
+    // border: 1px solid red;
     @include font-family($helvetica-bold);
     color: $color1;
     font-size: 44px;
     line-height: 35px;
     margin-bottom: 0;
     padding-top: 59px;
-    padding-left: 96px;
+    padding-left: 21px;
     text-transform: uppercase;
 
     span {
@@ -100,8 +116,8 @@
     }
   }
 
+  // actions
   &__actions {
-    min-width: 277px;
     padding-top: 55px;
 
     &-cart {
@@ -123,6 +139,7 @@
       }
     }
 
+    //donate
     &-donate {
       display: flex;
       justify-content: flex-end;
@@ -149,11 +166,13 @@
     }
   }
 
+  //bottomline
   &__bottomline {
     display: flex;
     padding-top: 90px;
     padding-bottom: 31px;
 
+    // main navigation
     &-nav {
       width: 100%;
       display: flex;
@@ -194,5 +213,285 @@
         }
       }
     }
+  }
+
+  /*------------ start media query styles ------------*/
+  // @media (min-width: 320px) and (max-width: 767px) {
+  //   border: 1px solid red;
+  // }
+
+  // @media (min-width: 767.98px) and (max-width: 992px) {
+  //   border: 1px solid blue;
+  // }
+
+  // @media (min-width: 991.98px) and (max-width: 1199.98px) {
+  //   border: 1px solid black;
+  // }
+  @media (min-width: 767.98px) and (max-width: 1120px) {
+    &__topline {
+      z-index: 200;
+      // opacity: 0;
+      // position: absolute;
+      // top: 0;
+      // left: 0;
+    }
+    &__bottomline-nav {
+      width: 100%;
+      position: relative;
+      opacity: 0;
+      font-size: 20px;
+
+      li {
+        margin-right: 5px;
+      }
+    }
+    &__burger-menu {
+      z-index: 50;
+      position: fixed;
+      top: 20px;
+      right: 16px;
+      display: block;
+      width: 27px;
+      height: 22px;
+
+      span {
+        width: 100%;
+        height: 2px;
+        background-color: black;
+        position: absolute;
+        left: 0;
+        top: 10px;
+      }
+      &:before,
+      &:after {
+        content: "";
+        width: 100%;
+        height: 2px;
+        background-color: black;
+        position: absolute;
+        left: 0;
+        // transition: all 0.3s ease 0s;
+      }
+      &:before {
+        top: 0;
+      }
+      &:after {
+        bottom: 0;
+      }
+      &_active:before {
+        top: 11px;
+        transform: rotate(45deg);
+      }
+      &_active:after {
+        transform: rotate(-45deg);
+        bottom: 9px;
+      }
+      &_active span {
+        transform: scale(0);
+      }
+    }
+
+    .active-menu {
+      justify-content: center;
+      // align-items: center;
+      padding-left: 0;
+      margin-right: 5px;
+      font-size: 20px;
+      background-color: black;
+      // flex-direction: column;
+      height: 100%;
+      opacity: 1;
+      border: 2px solid red;
+    }
+
+    .menu-visible {
+      display: flex;
+      display: block;
+      justify-content: center;
+    }
+    border: 3px solid black;
+  }
+
+  @media (min-width: 1120.98px) and (max-width: 1229px) {
+    @include block-padding(10px, 10px);
+
+    &__topline {
+      min-height: 0;
+    }
+
+    &__logo {
+      max-width: 203px;
+      flex-grow: 0;
+
+      &-top {
+        font-size: 45px;
+        line-height: 67px;
+      }
+      &-bottom-left {
+        font-size: 27px;
+        line-height: 29px;
+      }
+      &-bottom-right {
+        margin-top: -28px;
+        margin-left: 67px;
+        font-size: 12px;
+      }
+    }
+
+    .season {
+      padding-top: 35px;
+      line-height: 77px;
+
+      &__link {
+        &-title {
+          font-size: 80px;
+        }
+        &-text {
+          font-size: 46px;
+          padding-left: 0;
+        }
+
+        &_right {
+          margin-left: 30px;
+        }
+      }
+    }
+
+    &__celebrating {
+      font-size: 26px;
+      padding-top: 41px;
+      padding-left: 0;
+    }
+
+    &__actions {
+      padding-top: 46px;
+
+      &-donate-btn {
+        margin-top: 5px;
+      }
+    }
+
+    .social {
+      margin-top: 19px;
+    }
+    &__bottomline-nav {
+      justify-content: center;
+      padding: 0;
+
+      li {
+        margin-right: 36px;
+      }
+    }
+    border: 1px solid red;
+  }
+
+  @media (min-width: 1229.98px) and (max-width: 1324px) {
+    @include block-padding(10px, 10px);
+
+    &__logo {
+      max-width: 203px;
+      &-top {
+        font-size: 70px;
+      }
+      &-bottom-left {
+        font-size: 32px;
+        line-height: 37px;
+      }
+      &-bottom-right {
+        margin-top: -34px;
+        margin-left: 87px;
+        font-size: 15px;
+      }
+    }
+
+    .season {
+      padding-top: 51px;
+
+      &__link {
+        &-title {
+          font-size: 100px;
+        }
+        &-text {
+          font-size: 56px;
+          padding-left: 0;
+        }
+
+        &_right {
+          margin-left: 30px;
+        }
+      }
+    }
+
+    &__celebrating {
+      font-size: 30px;
+      padding-top: 63px;
+    }
+
+    &__actions {
+      padding-top: 67px;
+      &-donate-btn {
+        margin-top: 5px;
+      }
+    }
+
+    .social {
+      margin-top: 19px;
+    }
+
+    &__bottomline-nav {
+      justify-content: center;
+      padding: 0;
+    }
+
+    border: 1px solid yellow;
+  }
+
+  @media (min-width: 1324.98px) and (max-width: 1660px) {
+    @include block-padding(10px, 10px);
+
+    &__topline {
+      justify-content: space-around;
+    }
+    &__logo {
+      max-width: 219px;
+      &-top {
+        font-size: 70px;
+      }
+      &-bottom-left {
+        font-size: 42px;
+      }
+      &-bottom-right {
+        margin-top: -36px;
+        margin-left: 107px;
+      }
+    }
+
+    .season {
+      &__link {
+        &-title {
+          font-size: 119px;
+        }
+        &-text {
+          font-size: 67px;
+          padding-left: 0;
+        }
+      }
+    }
+
+    &__celebrating {
+      font-size: 35px;
+      padding-top: 63px;
+    }
+
+    &__actions {
+      padding-top: 67px;
+    }
+
+    &__bottomline-nav {
+      justify-content: center;
+      padding: 0;
+    }
+
+    border: 1px solid cadetblue;
   }
 }

@@ -133,104 +133,111 @@
       }
     }
 
-    &__social{
-      margin-top: 57px;
+    &__social {
+      margin-top: 58px;
+      margin-right: 44px;
       font-size: 21px;
-      
-      &-item{
+
+      &-item {
         width: 36px;
         height: 36px;
-        &:hover{
-          background-color:$color4;
+        &:hover {
+          background-color: $color4;
         }
 
-        &:last-child{
-          background-color:transparent;
+        &:last-child {
+          background-color: transparent;
         }
 
-        a{
-          color:$color2 !important;
-          &:hover{
-            color:$color2 !important;
+        a {
+          color: $color2 !important;
+          &:hover {
+            color: $color2 !important;
           }
         }
 
         &:last-child a {
           font-size: 37px;
-          color:$color3 !important;
+          color: $color3 !important;
 
-          &:hover{
-            
-            color:$color4 !important;
+          &:hover {
+            color: $color4 !important;
           }
         }
 
-        &_search{
-          color:$color4 !important;
-        } 
-
+        &_search {
+          color: $color4 !important;
+        }
       }
-      &-link{
+      &-link {
         width: 100%;
         height: 100%;
 
-        .instagram-svg{
+        .instagram-svg {
           width: 19px;
           height: 19px;
-          
+
           &__path2,
           &__path8,
-          &__path1{
-            fill: $color2 ;
+          &__path1 {
+            fill: $color2;
           }
 
-          &__circle{
-            fill:$color2;
-            &_black{
-              fill:$color3;
+          &__circle {
+            fill: $color2;
+            &_black {
+              fill: $color3;
             }
           }
         }
 
-      .youtube-svg{
-        width: 32px;
-        height: 33px;
+        .youtube-svg {
+          width: 32px;
+          height: 33px;
 
-        &__top-text,
-        &__middle-text{
-          fill:$color2;
+          &__top-text,
+          &__middle-text {
+            fill: $color2;
+          }
         }
-        
-      }
-        &:hover{
-          color:$color4 !important;
+        &:hover {
+          color: $color4 !important;
         }
       }
     }
   }
 
-  .authors{
+  .authors {
     @include font-family($helvetica-regular);
     font-size: 24px;
     text-transform: capitalize;
 
-    &__inner{
+    &__inner {
       display: flex;
       justify-content: center;
-      align-items:center;
+      align-items: center;
       flex-direction: column;
     }
 
-    p{
+    p {
       letter-spacing: 1px;
-      
-      span{
+
+      span {
         @include font-family($helvetica-bold);
         text-transform: uppercase;
-        
       }
     }
-    
-   
+
+    &__link {
+      text-decoration: none;
+      text-transform: lowercase;
+      color: $color4;
+      transition: all ease-out 0.4s;
+
+      &:hover {
+        transition: all ease-out 0.4s;
+        color: $color1;
+      }
+    }
   }
 }

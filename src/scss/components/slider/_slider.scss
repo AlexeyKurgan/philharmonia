@@ -160,4 +160,153 @@
       }
     }
   }
+  /*------------------- start media styles ---------------------------*/
+
+  @media (min-width: 0px) and (max-width: 768px) {
+    margin-top: 120px;
+    min-height: 0;
+
+    img {
+      height: 250px;
+    }
+    &__content {
+      right: 0;
+      max-width: 100%;
+      top: 25px;
+      padding: 0;
+
+      &::before {
+        left: 0%;
+        top: 5%;
+        width: 100%;
+        min-height: 147px;
+      }
+
+      &-title {
+        font-size: 14px;
+        line-height: 10px;
+        text-align: center;
+        margin-top: 20px;
+        margin-bottom: 5px;
+        word-spacing: 1px;
+
+        br {
+          display: none;
+        }
+      }
+
+      &-desc {
+        font-size: 14px;
+        line-height: 0px;
+        text-align: center;
+        margin-bottom: 5px;
+        word-spacing: 1px;
+
+        span:nth-child(2) {
+          font-size: 15px;
+          word-spacing: -5px;
+          letter-spacing: 2px;
+          padding-left: 0;
+
+          br {
+            display: block;
+          }
+        }
+      }
+      &-btn {
+        margin: 15px auto;
+        max-width: 220px;
+        a {
+          line-height: 28px;
+          font-size: 20px;
+          width: auto;
+          padding: 8px 5px 8px 5px;
+        }
+      }
+    }
+    .next-arrow {
+      top: 170px;
+    }
+    .prev-arrow {
+      top: 170px;
+    }
+    .slick-dots {
+      width: 100%;
+      max-width: 100%;
+      justify-content: space-evenly;
+      margin: 0;
+
+      li {
+        margin-left: 0;
+      }
+    }
+  }
+  @media (min-width: 767.98px) and (max-width: 990px) {
+    margin-top: 120px;
+    min-height: 0;
+
+    img {
+      height: 305px;
+    }
+    &__content {
+      right: 0;
+      max-width: 100%;
+      top: 25px;
+      padding: 0;
+
+      &::before {
+        left: 40%;
+        top: 5%;
+        width: 50%;
+        min-height: 220px;
+      }
+
+      &-title {
+        font-size: 20px;
+        line-height: 30px;
+        text-align: end;
+        padding-right: 150px;
+        padding-top: 40px;
+        margin-bottom: 5px;
+        word-spacing: 1px;
+
+        br {
+          display: none;
+        }
+      }
+
+      &-desc {
+        font-size: 15px;
+        margin-bottom: 22px;
+        line-height: 20px;
+        margin-left: 361px;
+        margin-right: 84px;
+
+        span:nth-child(2) {
+          font-size: 15px;
+          word-spacing: -5px;
+          letter-spacing: 2px;
+          padding-left: 0;
+
+          br {
+            display: block;
+          }
+        }
+      }
+      &-btn {
+        margin-left: 375px;
+      }
+    }
+  }
+
+  .next-arrow {
+    font-size: 25px;
+    top: 235px;
+    right: 0px;
+  }
+  .prev-arrow {
+    font-size: 25px;
+    top: 235px;
+    left: 0px;
+  }
 }

@@ -216,43 +216,154 @@
   }
 
   /*------------ start media query styles ------------*/
-  // @media (min-width: 320px) and (max-width: 767px) {
-  //   border: 1px solid red;
-  // }
 
-  // @media (min-width: 767.98px) and (max-width: 992px) {
-  //   border: 1px solid blue;
-  // }
+  @media (min-width: 0px) and (max-width: 622px) {
+    @include block-padding(10px, 10px);
 
-  // @media (min-width: 991.98px) and (max-width: 1199.98px) {
-  //   border: 1px solid black;
-  // }
-  @media (min-width: 767.98px) and (max-width: 1120px) {
-    &__topline {
-      z-index: 200;
-      // opacity: 0;
-      // position: absolute;
-      // top: 0;
-      // left: 0;
-    }
-    &__bottomline-nav {
-      width: 100%;
-      position: relative;
-      opacity: 0;
-      font-size: 20px;
+    &__logo {
+      height: 100px;
+      &-bottom-left {
+        font-size: 30px;
+        line-height: 30px;
+      }
 
-      li {
-        margin-right: 5px;
+      &-bottom-right {
+        font-size: 14px;
+        margin-top: -30px;
+        margin-left: 75px;
+      }
+
+      &-top {
+        line-height: 50px;
+        padding-top: 0;
+        font-size: 40px;
       }
     }
-    &__burger-menu {
-      z-index: 50;
+
+    &__inner {
+      width: 100%;
+      height: 120px;
+      overflow-y: scroll;
+      transition: all 0.5s;
+      padding: 0;
       position: fixed;
-      top: 20px;
-      right: 16px;
+      background-color: $color4;
+      left: 0;
+      top: 0;
+      z-index: 100;
+      opacity: 0.7;
+
+      &_active {
+        height: auto;
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        left: 0;
+        top: 0;
+        opacity: 1;
+        transition: all 0.2s;
+        background-color: $color4;
+      }
+    }
+
+    .season {
+      width: 100%;
+      opacity: 0;
+      transition: all 0.2s;
+      justify-content: space-evenly;
+      max-width: none;
+      padding-top: 80px;
+      line-height: 50px;
+
+      &__link-title {
+        font-size: 53px;
+      }
+
+      &__link-text {
+        font-size: 28px;
+        padding: 0;
+      }
+      &__link_right {
+        margin: 0;
+      }
+    }
+
+    &__celebrating {
+      width: 100%;
+      font-size: 20px;
+      line-height: 30px;
+      padding-left: 0;
+      padding-top: 25px;
+      text-align: center;
+      transition: all 0.2s;
+      opacity: 0;
+      flex-direction: column;
+
+      br {
+        display: none;
+      }
+    }
+
+    &__actions {
+      display: flex;
+      justify-content: space-evenly;
+      align-items: center;
+      width: 100%;
+      padding: 25px 0;
+      opacity: 0;
+      transition: all 0.2s;
+
+      &-cart {
+        font-size: 21px;
+        line-height: 18px;
+      }
+
+      &-donate-btn {
+        font-size: 21px;
+        margin-top: 0;
+      }
+    }
+
+    .social {
+      margin-top: 0;
+    }
+
+    &__topline {
+      @include block-padding(20px, 20px);
+      min-height: 120px;
+      z-index: 20;
+      flex-direction: column;
+    }
+
+    &__bottomline {
+      padding: 0;
+
+      &-nav {
+        width: 100%;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        padding-left: 0;
+        padding-right: 0;
+        transition: all 0.2s;
+        opacity: 0;
+        font-size: 18px;
+
+        li {
+          text-align: center;
+          width: 50%;
+          margin-right: 0px;
+        }
+      }
+    }
+
+    &__burger-menu {
       display: block;
-      width: 27px;
-      height: 22px;
+      position: fixed;
+      right: 24px;
+      top: 10px;
+      width: 30px;
+      height: 30px;
+      z-index: 150;
 
       span {
         width: 100%;
@@ -260,8 +371,9 @@
         background-color: black;
         position: absolute;
         left: 0;
-        top: 10px;
+        top: 13px;
       }
+
       &:before,
       &:after {
         content: "";
@@ -270,46 +382,273 @@
         background-color: black;
         position: absolute;
         left: 0;
-        // transition: all 0.3s ease 0s;
+        transition: all 0.3s ease 0s;
       }
       &:before {
-        top: 0;
+        top: 5px;
       }
       &:after {
-        bottom: 0;
+        bottom: 5px;
       }
       &_active:before {
         top: 11px;
+        border: 1px solid $color1;
+        background-color: $color1;
         transform: rotate(45deg);
       }
       &_active:after {
+        border: 1px solid $color1;
+        background-color: $color1;
         transform: rotate(-45deg);
-        bottom: 9px;
+        bottom: 17px;
       }
       &_active span {
         transform: scale(0);
       }
     }
 
-    .active-menu {
-      justify-content: center;
-      // align-items: center;
-      padding-left: 0;
-      margin-right: 5px;
-      font-size: 20px;
-      background-color: black;
-      // flex-direction: column;
-      height: 100%;
+    .display {
       opacity: 1;
-      border: 2px solid red;
+    }
+  }
+
+  @media (min-width: 622.98px) and (max-width: 990px) {
+    @include block-padding(0px, 0px);
+
+    &__inner {
+      max-height: 100vh;
+      overflow-y: scroll;
+      width: 100%;
+      padding: 0;
+      position: fixed;
+      background-color: $color4;
+      opacity: 0.7;
+      left: 0;
+      top: 0;
+      z-index: 100;
+
+      &_active {
+        position: fixed;
+        width: 100%;
+        left: 0;
+        top: 0;
+        opacity: 1;
+        display: block;
+        background-color: $color4;
+      }
+    }
+    &__logo {
+      max-width: none;
+      width: 100%;
+      z-index: 100;
+      &-bottom-left {
+        font-size: 24px;
+        line-height: 22px;
+      }
+
+      &-bottom-right {
+        margin-top: -23px;
+        margin-left: 60px;
+        font-size: 10px;
+        line-height: 12px;
+      }
+
+      &-top {
+        font-size: 40px;
+        line-height: 56px;
+        padding: 0;
+      }
     }
 
-    .menu-visible {
-      display: flex;
-      display: block;
-      justify-content: center;
+    .season {
+      width: 100%;
+      display: none;
+      justify-content: space-evenly;
+      max-width: none;
+      padding-top: 25px;
+
+      &__link-text {
+        padding: 0;
+      }
+      &__link_right {
+        margin: 0;
+      }
     }
-    border: 3px solid black;
+
+    &__celebrating {
+      width: 100%;
+      font-size: 44px;
+      line-height: 41px;
+      padding-left: 0;
+      padding-top: 25px;
+      text-align: center;
+      display: none;
+      flex-direction: column;
+
+      br {
+        display: none;
+      }
+    }
+
+    &__actions {
+      justify-content: space-evenly;
+      align-items: center;
+      width: 100%;
+      padding: 25px 0;
+      display: none;
+
+      &-donate-btn {
+        margin-top: 0;
+      }
+    }
+
+    .social {
+      margin-top: 0;
+    }
+
+    &__topline {
+      min-height: 120px;
+      @include block-padding(20px, 20px);
+      z-index: 20;
+      flex-direction: column;
+    }
+
+    &__bottomline {
+      padding: 0;
+      padding-bottom: 0px;
+
+      &-nav {
+        width: 100%;
+        justify-content: space-evenly;
+        padding-left: 0;
+        padding-bottom: 20px;
+        display: none;
+        font-size: 20px;
+
+        li {
+          margin-right: 5px;
+        }
+      }
+    }
+
+    .display {
+      display: flex;
+    }
+
+    &__burger-menu {
+      z-index: 150;
+      position: fixed;
+      top: 13px;
+      right: 70px;
+      display: block;
+      width: 35px;
+      height: 35px;
+
+      span {
+        width: 100%;
+        height: 2px;
+        background-color: black;
+        position: absolute;
+        left: 0;
+        top: 16px;
+      }
+
+      &:before,
+      &:after {
+        content: "";
+        width: 100%;
+        height: 2px;
+        background-color: black;
+        position: absolute;
+        left: 0;
+        transition: all 0.3s ease 0s;
+      }
+      &:before {
+        top: 5px;
+      }
+      &:after {
+        bottom: 5px;
+      }
+      &_active:before {
+        top: 11px;
+        border: 1px solid $color1;
+        transform: rotate(45deg);
+      }
+      &_active:after {
+        border: 1px solid $color1;
+        transform: rotate(-45deg);
+        bottom: 21px;
+      }
+      &_active span {
+        transform: scale(0);
+      }
+    }
+  }
+
+  @media (min-width: 990.98px) and (max-width: 1120px) {
+    @include block-padding(30px, 30px);
+
+    &__inner {
+      flex-direction: column-reverse;
+      display: flex;
+      padding-bottom: 50px;
+    }
+    &__logo {
+      max-width: none;
+      width: 100%;
+      order: -1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .season {
+      width: 100%;
+      display: flex;
+      justify-content: space-evenly;
+      max-width: none;
+
+      &__link-text {
+        padding: 0;
+      }
+      &__link_right {
+        margin: 0;
+      }
+    }
+
+    &__celebrating {
+      width: 100%;
+      font-size: 60px;
+      line-height: 51px;
+      padding-left: 0;
+      text-align: center;
+      order: -1;
+    }
+
+    &__actions {
+      display: flex;
+      justify-content: space-evenly;
+      align-items: baseline;
+      width: 100%;
+      order: -4;
+    }
+
+    &__topline {
+      flex-direction: column;
+    }
+
+    &__bottomline-nav {
+      width: 100%;
+      display: flex;
+      justify-content: space-evenly;
+      padding-left: 0;
+      position: relative;
+      font-size: 20px;
+
+      li {
+        margin-right: 5px;
+      }
+    }
   }
 
   @media (min-width: 1120.98px) and (max-width: 1229px) {
@@ -442,8 +781,6 @@
       justify-content: center;
       padding: 0;
     }
-
-    border: 1px solid yellow;
   }
 
   @media (min-width: 1324.98px) and (max-width: 1660px) {
@@ -491,7 +828,5 @@
       justify-content: center;
       padding: 0;
     }
-
-    border: 1px solid cadetblue;
   }
 }

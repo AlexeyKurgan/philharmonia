@@ -1,15 +1,17 @@
-const burgerMenu = document.querySelector('.header__burger-menu');
-const bottomLine = document.querySelector('.header__bottomline-nav');
-const topLine = document.querySelector('.header__topline');
-const menuitems = document.querySelectorAll('.header__bottomline-nav li')
+const burgerMenu = document.querySelector('.header__burger-menu'),
+    season = document.querySelector('.season'),
+    celebrating = document.querySelector('.header__celebrating'),
+    actions = document.querySelector('.header__actions'),
+    bottomLine = document.querySelector('.header__bottomline-nav'),
+    headerInner = document.querySelector('.header__inner');
 
 burgerMenu.addEventListener('click', ()=>{
-  document.body.classList.toggle('overflow-hidden');
-  bottomLine.classList.toggle('active-menu');
-//   topLine.classList.toggle('active-menu');
-  burgerMenu.classList.toggle('header__burger-menu_active');
-  
-  menuitems.forEach((item) => {
-    item.classList.toggle('menu-visible');
-  })
+    season.classList.toggle('display');
+    celebrating.classList.toggle('display');
+    actions.classList.toggle('display');
+    bottomLine.classList.toggle('display');
+    headerInner.classList.toggle('header__inner_active');
+    burgerMenu.classList.toggle('header__burger-menu_active');
+
+ 
 })

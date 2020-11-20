@@ -251,7 +251,7 @@
       left: 0;
       top: 0;
       z-index: 100;
-      opacity: 0.7;
+      opacity: 0.8;
 
       &_active {
         height: auto;
@@ -261,6 +261,7 @@
         left: 0;
         top: 0;
         opacity: 1;
+        display: block;
         transition: all 0.2s;
         background-color: $color4;
       }
@@ -268,7 +269,7 @@
 
     .season {
       width: 100%;
-      opacity: 0;
+      display: none;
       transition: all 0.2s;
       justify-content: space-evenly;
       max-width: none;
@@ -296,7 +297,7 @@
       padding-top: 25px;
       text-align: center;
       transition: all 0.2s;
-      opacity: 0;
+      display: none;
       flex-direction: column;
 
       br {
@@ -307,10 +308,12 @@
     &__actions {
       display: flex;
       justify-content: space-evenly;
+      flex-direction: column;
       align-items: center;
       width: 100%;
-      padding: 25px 0;
-      opacity: 0;
+      height: 216px;
+      padding: 0;
+      display: none;
       transition: all 0.2s;
 
       &-cart {
@@ -345,7 +348,7 @@
         padding-left: 0;
         padding-right: 0;
         transition: all 0.2s;
-        opacity: 0;
+        display: none;
         font-size: 18px;
 
         li {
@@ -408,10 +411,9 @@
     }
 
     .display {
-      opacity: 1;
+      display: flex;
     }
   }
-
   @media (min-width: 622.98px) and (max-width: 990px) {
     @include block-padding(0px, 0px);
 
@@ -584,7 +586,6 @@
       }
     }
   }
-
   @media (min-width: 990.98px) and (max-width: 1120px) {
     @include block-padding(30px, 30px);
 
@@ -650,7 +651,6 @@
       }
     }
   }
-
   @media (min-width: 1120.98px) and (max-width: 1229px) {
     @include block-padding(10px, 10px);
 
@@ -721,9 +721,8 @@
         margin-right: 36px;
       }
     }
-    border: 1px solid red;
-  }
 
+  }
   @media (min-width: 1229.98px) and (max-width: 1324px) {
     @include block-padding(10px, 10px);
 
@@ -782,7 +781,6 @@
       padding: 0;
     }
   }
-
   @media (min-width: 1324.98px) and (max-width: 1660px) {
     @include block-padding(10px, 10px);
 

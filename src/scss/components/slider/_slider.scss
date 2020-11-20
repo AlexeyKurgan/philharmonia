@@ -1,6 +1,6 @@
 .slider {
   width: 100%;
-  min-height: 800px;
+  min-height: 800px;  
 
   &__item {
     position: relative;
@@ -162,10 +162,11 @@
   }
   /*------------------- start media styles ---------------------------*/
 
+  // 0px - 768px 
   @media (min-width: 0px) and (max-width: 768px) {
     margin-top: 120px;
     min-height: 0;
-
+    
     img {
       height: 250px;
     }
@@ -176,10 +177,10 @@
       padding: 0;
 
       &::before {
-        left: 0%;
+        left: 0;
         top: 5%;
         width: 100%;
-        min-height: 147px;
+        min-height: 140px;
       }
 
       &-title {
@@ -187,6 +188,7 @@
         line-height: 10px;
         text-align: center;
         margin-top: 20px;
+        margin-right: 0;
         margin-bottom: 5px;
         word-spacing: 1px;
 
@@ -196,14 +198,17 @@
       }
 
       &-desc {
+        max-width: 300px;
+        margin-right: 0;
         font-size: 14px;
-        line-height: 0px;
+        line-height: 10px;
         text-align: center;
-        margin-bottom: 5px;
-        word-spacing: 1px;
+        margin-bottom: 0;
+        word-spacing: 0;
+        @include block-padding(10px,10px);
 
         span:nth-child(2) {
-          font-size: 15px;
+          font-size: 13px;
           word-spacing: -5px;
           letter-spacing: 2px;
           padding-left: 0;
@@ -217,30 +222,39 @@
         margin: 15px auto;
         max-width: 220px;
         a {
-          line-height: 28px;
-          font-size: 20px;
+          line-height: 25px;
+          font-size: 14px;
           width: auto;
-          padding: 8px 5px 8px 5px;
+          padding: 3px 5px 3px 5px;
         }
       }
     }
+    .btn{
+      width: 40px;
+      height: 40px;
+      top:209px;
+    }
     .next-arrow {
-      top: 170px;
+      right: 69px;
+      font-size: 20px;
     }
     .prev-arrow {
-      top: 170px;
+      left: 83px;
+      font-size: 20px;
     }
     .slick-dots {
       width: 100%;
       max-width: 100%;
-      justify-content: space-evenly;
+      justify-content: center;
       margin: 0;
 
       li {
-        margin-left: 0;
+        margin-left: 10px;
       }
     }
   }
+
+  // 768px - 990px 
   @media (min-width: 767.98px) and (max-width: 990px) {
     margin-top: 120px;
     min-height: 0;
@@ -277,10 +291,11 @@
 
       &-desc {
         font-size: 15px;
+        max-width: 330px;
         margin-bottom: 22px;
         line-height: 20px;
-        margin-left: 361px;
-        margin-right: 84px;
+        margin-left: 376px;
+        margin-right: 98px;
 
         span:nth-child(2) {
           font-size: 15px;
@@ -294,19 +309,23 @@
         }
       }
       &-btn {
+        width: 200px;
         margin-left: 375px;
+        a{
+          font-size: 24px;
+          padding: 12px 10px 8px 10px;
+        }
       }
     }
-  }
-
-  .next-arrow {
-    font-size: 25px;
-    top: 235px;
-    right: 0px;
-  }
-  .prev-arrow {
-    font-size: 25px;
-    top: 235px;
-    left: 0px;
+    .next-arrow {
+      font-size: 25px;
+      top: 235px;
+      right: 0px;
+    }
+    .prev-arrow {
+      font-size: 25px;
+      top: 235px;
+      left: 0px;
+    }
   }
 }

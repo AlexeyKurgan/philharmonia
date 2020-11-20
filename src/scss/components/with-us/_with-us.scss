@@ -10,4 +10,17 @@
     letter-spacing: 2px;
     padding-bottom: 99px;
   }
+
+  @media (max-width: 767.98px) {
+    width: 100%;
+    @include block-padding(10px,10px);
+
+    &__title {
+      padding: 10px;
+      text-align: center;
+      line-height: 75px;
+      letter-spacing: 1px;
+      font-size: 45px;
+    }
+  }
 }

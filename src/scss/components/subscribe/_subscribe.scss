@@ -51,4 +51,25 @@
       }
     }
   }
+  @media (max-width: 767.98px) {
+    margin-bottom: 40px;
+    
+    &__title {
+      padding: 0px;
+      font-size: 30px;
+    }
+
+    form{
+      display: flex;
+      justify-content: space-around;
+    }
+
+    input{
+      width: 40%;
+      margin: 0;  
+      &:last-child{
+        width: 40%;
+      }
+    }
+  }
 }

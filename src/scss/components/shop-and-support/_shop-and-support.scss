@@ -3,11 +3,11 @@
 
   &__inner {
     display: flex;
-    justify-content: flex-end;
   }
 
   .our-shop {
-    min-width: 581px;
+    width: 100%;
+    max-width: 581px;
     margin-right: 31px;
 
     &__title {
@@ -22,7 +22,8 @@
     &__item {
       min-height: 317px;
       margin-top: 16px;
-
+      width: 100%;
+      max-width: 576px;
       img {
         width: 100%;
         height: 100%;
@@ -49,10 +50,12 @@
       display: flex;
 
       &-left {
-        width: 576px;
-        min-height: 332px;
+        width: 100%;
+        min-height: 100%;
+
         max-width: 576px;
         margin-right: 31px;
+
         img {
           width: 100%;
           height: 100%;
@@ -84,74 +87,142 @@
     }
   }
 
-  
   @media (max-width: 767.98px) {
+    width: 100%;
+    @include block-padding(10px, 10px);
+
+    &__inner {
+      flex-direction: column;
+    }
+    .our-shop {
       width: 100%;
-      @include block-padding(10px,10px);
+      min-width: 100%;
+      margin: 0;
+      margin-bottom: 40px;
 
-      &__inner{
+      &__item {
+        min-height: auto;
+      }
+
+      &__title {
+        padding: 0px;
+        font-size: 30px;
+        line-height: 39px;
+        text-align: center;
+      }
+    }
+
+    .support-us {
+      &__title {
+        padding: 0px;
+        font-size: 30px;
+        line-height: 39px;
+        text-align: center;
+      }
+
+      &__inner {
         flex-direction: column;
-      }
-      .our-shop{
-        width: 100%;
-        min-width: 100%;
-        margin: 0;
-        margin-bottom: 40px;
 
-        &__item{
+        &-left {
+          width: 100%;
           min-height: auto;
+          max-width: 100%;
+          margin-right: 0;
+          margin-bottom: 30px;
         }
 
-        &__title {
-          padding: 0px;
-          font-size: 30px;
-          line-height: 39px;
-          text-align: center;
-        }
-      }
+        &-right {
+          min-height: 150px;
 
-      .support-us{
-        &__title {
-          padding: 0px;
-          font-size: 30px;
-          line-height: 39px;
-          text-align: center;
-        }
-
-        &__inner{
-          flex-direction: column;
-
-          &-left{
-            width: 100%;
-            min-height: auto; 
-            max-width: 100%; 
-            margin-right: 0;
-            margin-bottom: 30px;
-          }
-
-          &-right{
-            min-height: 150px;
-
-            &-text{
-              font-size: 27px;
-              line-height: 33px;
-              padding: 0 10px;
-              text-align: center         
-            }
+          &-text {
+            font-size: 27px;
+            line-height: 33px;
+            padding: 0 10px;
+            text-align: center;
           }
         }
       }
-      
+    }
   }
   @media (max-width: 991.98px) {
-    @include block-padding(30px,30px);
-    &__title {
-      padding: 10px;
-      text-align: center;
-      line-height: 75px;
-      letter-spacing: 1px;
-      font-size: 45px;
-    } 
+    @include block-padding(30px, 30px);
+
+    &__inner {
+      flex-direction: column;
+    }
+
+    .our-shop {
+      &__title {
+        padding-top: 70px;
+      }
+    }
+
+    .support-us {
+      &__title {
+        padding: 0;
+        padding-top: 60px;
+      }
+    }
   }
-  
+  @media (max-width: 1220.98px) {
+    &__inner {
+      flex-direction: column;
+    }
+
+    .our-shop {
+      &__title {
+        padding-top: 100px;
+      }
+
+      &__item {
+        margin-top: 0;
+      }
+    }
+
+    .support-us {
+      &__title {
+        padding-top: 100px;
+        padding-left: 0;
+      }
+    }
+  }
+  @media (min-width: 1221px) and (max-width: 1600.98px) {
+    &__inner {
+      justify-content: center;
+      align-items: baseline;
+    }
+
+    .our-shop {
+      &__title {
+        padding-top: 0;
+      }
+    }
+    .support-us {
+      width: auto;
+      &__title {
+        padding-top: 0;
+      }
+      &__inner {
+        flex-direction: column;
+        max-width: 379px;
+        min-height: 328px;
+
+        &-left {
+          margin-right: 0;
+          height: 193px;
+
+          img {
+            width: auto;
+            height: auto;
+          }
+        }
+
+        &-right {
+          &-text {
+            font-size: 33px;
+          }
+        }
+      }
+    }
+  }
 }

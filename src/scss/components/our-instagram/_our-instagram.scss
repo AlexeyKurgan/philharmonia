@@ -32,7 +32,7 @@
   // start media queries
   @media (max-width: 767.98px) {
     width: 100%;
-    @include block-padding(10px,10px);
+    @include block-padding(10px, 10px);
 
     &__title {
       padding: 0px;
@@ -40,19 +40,48 @@
       margin-bottom: 20px;
     }
 
-    &__list{
+    &__list {
       flex-direction: column;
-      align-items:center;
+      align-items: center;
     }
 
-    &__item{
+    &__item {
       display: flex;
       justify-content: center;
-      align-items:center;
+      align-items: center;
       width: 100%;
       height: auto;
       margin-bottom: 10px;
     }
+  }
+  @media (max-width: 991.98px) {
+    @include block-padding(30px, 30px);
 
+    &__title {
+      padding: 40px 0px;
+    }
+
+    &__list {
+      align-items: stretch;
+    }
+
+    &__item {
+      height: auto;
+    }
+  }
+  @media (max-width: 1220.98px) {
+    @include block-padding(30px, 30px);
+
+    &__title {
+      padding: 40px 0px;
+    }
+
+    &__list {
+      align-items: stretch;
+    }
+
+    &__item {
+      height: auto;
+    }
   }
 }

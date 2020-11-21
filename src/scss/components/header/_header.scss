@@ -432,6 +432,7 @@
       &_active {
         position: fixed;
         width: 100%;
+        height: 60%;
         left: 0;
         top: 0;
         opacity: 1;
@@ -652,7 +653,7 @@
     }
   }
   @media (min-width: 1120.98px) and (max-width: 1229px) {
-    @include block-padding(10px, 10px);
+    @include block-padding(30px, 30px);
 
     &__topline {
       min-height: 0;
@@ -721,7 +722,6 @@
         margin-right: 36px;
       }
     }
-
   }
   @media (min-width: 1229.98px) and (max-width: 1324px) {
     @include block-padding(10px, 10px);

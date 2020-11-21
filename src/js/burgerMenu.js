@@ -6,6 +6,7 @@ const burgerMenu = document.querySelector('.header__burger-menu'),
     headerInner = document.querySelector('.header__inner');
 
 burgerMenu.addEventListener('click', ()=>{
+    
     season.classList.toggle('display');
     celebrating.classList.toggle('display');
     actions.classList.toggle('display');
@@ -13,5 +14,9 @@ burgerMenu.addEventListener('click', ()=>{
     headerInner.classList.toggle('header__inner_active');
     burgerMenu.classList.toggle('header__burger-menu_active');
 
- 
+    if(headerInner.classList.contains('header__inner_active')){
+        document.body.classList.toggle('overflow-hidden');
+    }else{
+        document.body.classList.remove('overflow-hidden');
+    }
 })

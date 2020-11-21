@@ -242,25 +242,25 @@
   }
 
   @media (max-width: 767.98px) {
-    @include block-padding(10px,10px);
+    @include block-padding(10px, 10px);
     padding-bottom: 10px;
 
-    .our-partners{
+    .our-partners {
       padding: 0;
       min-height: auto;
       margin-bottom: 40px;
-      
-      &__list{
+
+      &__list {
         flex-direction: column;
         height: 100%;
         padding: 0;
       }
 
-      &__item{
+      &__item {
         width: 50%;
         margin: 20px 0;
         a {
-          img{
+          img {
             width: auto;
           }
         }
@@ -272,62 +272,125 @@
       }
     }
 
-    .info{
+    .info {
       margin-bottom: 20px;
 
-      &__wrapper-arrow{
+      &__wrapper-arrow {
         width: 36px;
         height: 36px;
         margin: 0;
       }
-      &__contacts{
+      &__contacts {
         width: 100%;
 
-        &-title{       
+        &-title {
           font-size: 20px;
           margin: 0;
           margin-top: 20px;
         }
 
-        &-adress{
+        &-adress {
           font-size: 15px;
           margin: 0;
           margin-top: 20px;
           text-align: center;
         }
 
-        &-phone{
+        &-phone {
           font-size: 20px;
           margin: 0;
           margin-top: 20px;
         }
 
-        &-email{
+        &-email {
           font-size: 18px;
           margin: 0;
           margin-top: 20px;
           letter-spacing: 0px;
           text-align: center;
         }
-        &-url1,&-url2{
+        &-url1,
+        &-url2 {
           font-size: 21px;
           letter-spacing: 0px;
           line-height: 31px;
-          margin:0;
+          margin: 0;
           margin-top: 20px;
         }
       }
 
-     &__social{
+      &__social {
         margin: 0;
         margin-top: 40px;
       }
     }
-    .authors  {
+    .authors {
       letter-spacing: 1px;
       font-size: 20px;
       width: 100%;
       text-align: center;
+    }
+  }
+
+  @media (max-width: 991.98px) {
+    @include block-padding(30px, 30px);
+
+    .our-partners {
+      padding: 0;
+
+      &__title {
+        padding-top: 45px;
+        padding-bottom: 45px;
+      }
+
+      &__list {
+        padding-bottom: 50px;
+      }
+
+      &__item {
+        margin-right: 20px;
+      }
+    }
+
+    .info {
+      margin-bottom: 70px;
+
+      &__wrapper-arrow {
+        width: 40px;
+        height: 40px;
+        margin-right: 0px;
+        margin-bottom: 52px;
+      }
+    }
+  }
+
+  @media (max-width: 1220.98px) {
+    .our-partners {
+      @include block-padding(30px, 30px);
+
+      &__title {
+        padding-top: 50px;
+        padding-bottom: 50px;
+      }
+
+      &__list {
+        padding-bottom: 80px;
+      }
+
+      &__item {
+        margin-right: 20px;
+      }
+    }
+
+    .info {
+      margin-bottom: 50px;
+
+      &__wrapper-arrow {
+        width: 40px;
+        height: 40px;
+        margin-right: 0px;
+        margin-bottom: 52px;
+      }
     }
   }
 }

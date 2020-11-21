@@ -1,13 +1,13 @@
 html {
   width: 100%;
   max-width: 100%;
-  overflow-x: hidden;
+  // overflow-x: hidden;
 }
 
 body {
   width: 100%;
   max-width: 100%;
-  overflow-x: hidden;
+  // overflow-x: hidden;
   height: 100vh;
   @include font-family($helvetica-regular);
 }

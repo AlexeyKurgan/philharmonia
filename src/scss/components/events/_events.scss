@@ -44,12 +44,9 @@
     }
 
     &-btn {
-      // margin-left: 61px;
-      // min-width: 260px;
       cursor: pointer;
       margin-left: 70px;
       min-width: 257px;
-      // padding: 19px;
       @include font-family($helvetica-bold);
       font-size: 40px;
       padding: 0;
@@ -69,12 +66,6 @@
         background-color: $color1;
         margin-left: 20px;
       }
-      // a {
-      //   @include font-family($helvetica-bold);
-      //   font-size: 40px;
-      //   padding: 16px;
-      //   letter-spacing: 2px;
-      // }
     }
   }
 
@@ -94,11 +85,9 @@
 
       &-btn {
         margin-left: 0;
-
-        a {
-          font-size: 16px;
-          padding: 3px;
-        }
+        font-size: 16px;
+        padding: 3px;
+        
       }
     }
 
@@ -198,10 +187,9 @@
       }
       &-btn {
         min-width: 110px;
-        a {
-          font-size: 25px;
-          padding: 9px;
-        }
+        font-size: 25px;
+        padding: 9px;
+       
       }
     }
 
